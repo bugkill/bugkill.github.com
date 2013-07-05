@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>图学网</title>
+    <link>http://www.tooxue.com</link>
+    <pubDate>2013-07-05 11:12:46 +0800</pubDate>
+    <item>
+      <title>sql 内存表</title>
+      <link>http://www.tooxue.com/2013/0705/sql-memory-table.html</link>
+      <pubDate>2013-07-05 12:00:00 +0800</pubDate>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ndash;临时表：#temp&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&amp;ndash;内存表=表变量：@temp 唯一不足的地方就是过程结束，表变量就释放了&lt;/p&gt;
+
+&lt;p&gt;&amp;ndash;sql server 里面没有常驻内存的表变量，就是说 没有真正意义上的内存表&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;declare  @DataSynLog table (idx uniqueidentifier,
+tabelname nvarchar(50),
+tabel_idx nvarchar(50),
+updata_time smalldatetime,
+isdelete int,
+level int,
+Code int,
+dowork int)  
+
+insert into @DataSynLog select * from datasynlog
+
+select * from @DataSynLog
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+  </channel>
+</rss>
